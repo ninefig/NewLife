@@ -117,17 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="novos habitos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\novos habitos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="deixa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\deixa.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rotina" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rotina.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="recompensa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\recompensa.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblTextoCentral.Text" xml:space="preserve">
+    <value>
+O Loop do hábito é algo que depende de 3 coisas: 
+
+Uma deixa (Gatilho que ligue a chave do hábito) &gt; Pode ser um lugar, uma pessoa, sensação ou objeto. 
+Rotina (Atividade que é sempre realizada quando você se depara com a deixa)
+Recompensa (Prêmio ou sensação após realizar a tarefa). 
+
+Quanto maior a recompensa, maiores serão as chances de você repetir o hábito. 
+
+Então, vamos lá montar seu novo hábito para ter uma vida melhor e alcançar melhores resultados?</value>
   </data>
 </root>

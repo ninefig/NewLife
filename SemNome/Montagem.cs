@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SemNome
 {
-    public partial class Form1 : Form
+    public partial class Montagem : Form
     {
-        public Form1()
+        public Montagem()
         {
             InitializeComponent();
         }
