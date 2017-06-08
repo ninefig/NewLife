@@ -35,28 +35,25 @@
             this.txtDeixa1 = new System.Windows.Forms.TextBox();
             this.txtRotina1 = new System.Windows.Forms.TextBox();
             this.txtRecompensa1 = new System.Windows.Forms.TextBox();
-            this.txtRotina2 = new System.Windows.Forms.TextBox();
-            this.txtRotina3 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureRecompensa = new System.Windows.Forms.PictureBox();
+            this.cmbPeriodo = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbDias = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnIniciar = new System.Windows.Forms.Button();
             this.pictureRotina = new System.Windows.Forms.PictureBox();
             this.pictureDeixa = new System.Windows.Forms.PictureBox();
-            this.txtDeixa2 = new System.Windows.Forms.TextBox();
-            this.txtDeixa3 = new System.Windows.Forms.TextBox();
-            this.txtRecompensa2 = new System.Windows.Forms.TextBox();
-            this.txtRecompensa3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.timerPeriodo = new System.Windows.Forms.Timer(this.components);
+            this.pictureRecompensa = new System.Windows.Forms.PictureBox();
+            this.timer12h = new System.Windows.Forms.Timer(this.components);
+            this.timer24h = new System.Windows.Forms.Timer(this.components);
+            this.timer8h = new System.Windows.Forms.Timer(this.components);
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureRecompensa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRotina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDeixa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRecompensa)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -93,57 +90,41 @@
             // txtDeixa1
             // 
             this.txtDeixa1.Location = new System.Drawing.Point(87, 260);
+            this.txtDeixa1.Multiline = true;
             this.txtDeixa1.Name = "txtDeixa1";
-            this.txtDeixa1.Size = new System.Drawing.Size(98, 20);
+            this.txtDeixa1.Size = new System.Drawing.Size(98, 70);
             this.txtDeixa1.TabIndex = 3;
             // 
             // txtRotina1
             // 
             this.txtRotina1.Location = new System.Drawing.Point(310, 167);
+            this.txtRotina1.Multiline = true;
             this.txtRotina1.Name = "txtRotina1";
-            this.txtRotina1.Size = new System.Drawing.Size(83, 20);
+            this.txtRotina1.Size = new System.Drawing.Size(83, 72);
             this.txtRotina1.TabIndex = 4;
             // 
             // txtRecompensa1
             // 
-            this.txtRecompensa1.Location = new System.Drawing.Point(529, 130);
+            this.txtRecompensa1.Location = new System.Drawing.Point(527, 130);
+            this.txtRecompensa1.Multiline = true;
             this.txtRecompensa1.Name = "txtRecompensa1";
-            this.txtRecompensa1.Size = new System.Drawing.Size(83, 20);
+            this.txtRecompensa1.Size = new System.Drawing.Size(85, 74);
             this.txtRecompensa1.TabIndex = 5;
-            // 
-            // txtRotina2
-            // 
-            this.txtRotina2.Location = new System.Drawing.Point(310, 193);
-            this.txtRotina2.Name = "txtRotina2";
-            this.txtRotina2.Size = new System.Drawing.Size(83, 20);
-            this.txtRotina2.TabIndex = 6;
-            // 
-            // txtRotina3
-            // 
-            this.txtRotina3.Location = new System.Drawing.Point(310, 219);
-            this.txtRotina3.Name = "txtRotina3";
-            this.txtRotina3.Size = new System.Drawing.Size(83, 20);
-            this.txtRotina3.TabIndex = 7;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnLimpar);
+            this.panel1.Controls.Add(this.cmbPeriodo);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.cmbDias);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.txtRecompensa3);
-            this.panel1.Controls.Add(this.txtDeixa3);
-            this.panel1.Controls.Add(this.txtDeixa2);
-            this.panel1.Controls.Add(this.txtRotina2);
-            this.panel1.Controls.Add(this.txtRotina3);
+            this.panel1.Controls.Add(this.btnIniciar);
             this.panel1.Controls.Add(this.txtRotina1);
             this.panel1.Controls.Add(this.txtDeixa1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtRecompensa2);
             this.panel1.Controls.Add(this.txtRecompensa1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -152,18 +133,93 @@
             this.panel1.Controls.Add(this.pictureRecompensa);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(726, 431);
+            this.panel1.Size = new System.Drawing.Size(737, 460);
             this.panel1.TabIndex = 9;
             // 
-            // pictureRecompensa
+            // cmbPeriodo
             // 
-            this.pictureRecompensa.Image = global::SemNome.Properties.Resources.recompensa;
-            this.pictureRecompensa.Location = new System.Drawing.Point(470, 51);
-            this.pictureRecompensa.Name = "pictureRecompensa";
-            this.pictureRecompensa.Size = new System.Drawing.Size(206, 188);
-            this.pictureRecompensa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureRecompensa.TabIndex = 10;
-            this.pictureRecompensa.TabStop = false;
+            this.cmbPeriodo.FormattingEnabled = true;
+            this.cmbPeriodo.Items.AddRange(new object[] {
+            "8",
+            "12",
+            "24"});
+            this.cmbPeriodo.Location = new System.Drawing.Point(442, 389);
+            this.cmbPeriodo.Name = "cmbPeriodo";
+            this.cmbPeriodo.Size = new System.Drawing.Size(113, 21);
+            this.cmbPeriodo.TabIndex = 21;
+            this.cmbPeriodo.SelectedIndexChanged += new System.EventHandler(this.cmbPeriodo_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(28, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(328, 47);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Monte seu novo hábito";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(439, 372);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(149, 13);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Período (Ex: a cada 24 horas)";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(280, 372);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Quando? (Quant. em Dias)";
+            // 
+            // cmbDias
+            // 
+            this.cmbDias.AutoCompleteCustomSource.AddRange(new string[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.cmbDias.FormattingEnabled = true;
+            this.cmbDias.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.cmbDias.Location = new System.Drawing.Point(283, 388);
+            this.cmbDias.Name = "cmbDias";
+            this.cmbDias.Size = new System.Drawing.Size(121, 21);
+            this.cmbDias.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(358, 324);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 25);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Lembrete";
+            // 
+            // btnIniciar
+            // 
+            this.btnIniciar.Location = new System.Drawing.Point(591, 388);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(75, 23);
+            this.btnIniciar.TabIndex = 14;
+            this.btnIniciar.Text = "Iniciar";
+            this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // pictureRotina
             // 
@@ -185,109 +241,46 @@
             this.pictureDeixa.TabIndex = 8;
             this.pictureDeixa.TabStop = false;
             // 
-            // txtDeixa2
+            // pictureRecompensa
             // 
-            this.txtDeixa2.Location = new System.Drawing.Point(87, 286);
-            this.txtDeixa2.Name = "txtDeixa2";
-            this.txtDeixa2.Size = new System.Drawing.Size(98, 20);
-            this.txtDeixa2.TabIndex = 11;
+            this.pictureRecompensa.Image = global::SemNome.Properties.Resources.recompensa;
+            this.pictureRecompensa.Location = new System.Drawing.Point(470, 51);
+            this.pictureRecompensa.Name = "pictureRecompensa";
+            this.pictureRecompensa.Size = new System.Drawing.Size(206, 188);
+            this.pictureRecompensa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureRecompensa.TabIndex = 10;
+            this.pictureRecompensa.TabStop = false;
             // 
-            // txtDeixa3
+            // timer12h
             // 
-            this.txtDeixa3.Location = new System.Drawing.Point(87, 312);
-            this.txtDeixa3.Name = "txtDeixa3";
-            this.txtDeixa3.Size = new System.Drawing.Size(98, 20);
-            this.txtDeixa3.TabIndex = 12;
+            this.timer12h.Interval = 12000;
+            this.timer12h.Tick += new System.EventHandler(this.timer12h_Tick);
             // 
-            // txtRecompensa2
+            // timer24h
             // 
-            this.txtRecompensa2.Location = new System.Drawing.Point(529, 156);
-            this.txtRecompensa2.Name = "txtRecompensa2";
-            this.txtRecompensa2.Size = new System.Drawing.Size(83, 20);
-            this.txtRecompensa2.TabIndex = 5;
+            this.timer24h.Interval = 24000;
+            this.timer24h.Tick += new System.EventHandler(this.timer24h_Tick);
             // 
-            // txtRecompensa3
+            // timer8h
             // 
-            this.txtRecompensa3.Location = new System.Drawing.Point(529, 182);
-            this.txtRecompensa3.Name = "txtRecompensa3";
-            this.txtRecompensa3.Size = new System.Drawing.Size(83, 20);
-            this.txtRecompensa3.TabIndex = 13;
+            this.timer8h.Interval = 8000;
+            this.timer8h.Tick += new System.EventHandler(this.timer8h_Tick);
             // 
-            // button1
+            // btnLimpar
             // 
-            this.button1.Location = new System.Drawing.Point(585, 386);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(358, 324);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 25);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Lembrete";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(422, 388);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 16;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Todos os dias",
-            "1 dia",
-            "2 dias ",
-            "3 dias",
-            "4 dias ",
-            "5 dias",
-            "6 dias"});
-            this.comboBox1.Location = new System.Drawing.Point(283, 388);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 17;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(280, 372);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 13);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Quando?";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(419, 372);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 13);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Período (Ex: a cada 24 horas)";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(328, 47);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Monte seu novo hábito";
+            this.btnLimpar.Location = new System.Drawing.Point(591, 417);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.TabIndex = 22;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // Montagem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 455);
+            this.ClientSize = new System.Drawing.Size(761, 484);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "Montagem";
@@ -295,9 +288,9 @@
             this.Text = "NewLife - Monte seu novo hábito :)";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureRecompensa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRotina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDeixa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRecompensa)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,23 +303,20 @@
         private System.Windows.Forms.TextBox txtDeixa1;
         private System.Windows.Forms.TextBox txtRotina1;
         private System.Windows.Forms.TextBox txtRecompensa1;
-        private System.Windows.Forms.TextBox txtRotina2;
-        private System.Windows.Forms.TextBox txtRotina3;
         private System.Windows.Forms.PictureBox pictureDeixa;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureRotina;
         private System.Windows.Forms.PictureBox pictureRecompensa;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtRecompensa3;
-        private System.Windows.Forms.TextBox txtDeixa3;
-        private System.Windows.Forms.TextBox txtDeixa2;
-        private System.Windows.Forms.TextBox txtRecompensa2;
+        private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cmbDias;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Timer timerPeriodo;
+        private System.Windows.Forms.Timer timer12h;
+        private System.Windows.Forms.Timer timer24h;
+        private System.Windows.Forms.Timer timer8h;
+        private System.Windows.Forms.ComboBox cmbPeriodo;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }
