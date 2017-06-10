@@ -62,7 +62,7 @@
             this.btnVamosLa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVamosLa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVamosLa.ForeColor = System.Drawing.Color.White;
-            this.btnVamosLa.Location = new System.Drawing.Point(278, 335);
+            this.btnVamosLa.Location = new System.Drawing.Point(307, 341);
             this.btnVamosLa.Name = "btnVamosLa";
             this.btnVamosLa.Size = new System.Drawing.Size(132, 38);
             this.btnVamosLa.TabIndex = 2;
